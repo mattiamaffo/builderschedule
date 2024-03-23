@@ -6,21 +6,21 @@ CONSIGLI DI MAMMA CHAT:
 
 Definisci chiaramente le funzionalità principali dell'applicazione, come la gestione delle schede di allenamento, l'autenticazione degli utenti, la personalizzazione delle schede, ecc.
 
-2)Progettazione dell'interfaccia utente (UI):
+2) Progettazione dell'interfaccia utente (UI):
 
 disegna i mockup dell'interfaccia utente dell'applicazione, includendo schermate per l'autenticazione, la visualizzazione delle schede di allenamento, la creazione di nuove schede personalizzate, ecc.
 
-3)Sviluppo dell'interfaccia utente (UI):
+3) Sviluppo dell'interfaccia utente (UI):
 Utilizza Flutter per implementare le schermate progettate, assicurandoti che l'interfaccia sia intuitiva e facile da usare per gli utenti.
 
-4)Implementazione dell'autenticazione:
+4) Implementazione dell'autenticazione:
 
 Integra un sistema di autenticazione per consentire agli utenti di accedere all'applicazione in modo sicuro. Puoi utilizzare soluzioni come Firebase Authentication per semplificare questo processo.
 
-5)Gestione delle schede di allenamento:
+5) Gestione delle schede di allenamento:
 
 Implementa la logica per visualizzare le schede di allenamento degli utenti iscritti. Le schede potrebbero essere salvate su un database, ad esempio Firebase Realtime Database o Firestore.
-6)Personalizzazione delle schede di allenamento:
+6) Personalizzazione delle schede di allenamento:
 
 Aggiungi funzionalità per consentire agli utenti di creare schede di allenamento personalizzate. Questo potrebbe coinvolgere la selezione di esercizi, il numero di ripetizioni, i pesi, ecc.
 7) Integrazione con i dati degli istruttori:
