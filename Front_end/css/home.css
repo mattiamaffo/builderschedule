@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(rgba(176, 178, 255, 0.4), rgba(191, 211, 255, 0.4)), url(../../images/back.jpg);
+    background-image: linear-gradient(rgba(176, 178, 255, 0.4), rgba(191, 211, 255, 0.4)), url(../../src/back.jpg);
     background-size: cover;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -75,6 +75,28 @@ body {
     transition-duration: 0.4s;
     
 }
+
+.password-container {
+    position: relative;
+}
+
+.password-container label {
+    display: block; /* Mostra l'etichetta come blocco per posizionarla sopra l'input */
+    margin-bottom: 5px; /* Spazio tra l'etichetta e l'input */
+}
+
+.password-container input[type="password"] {
+    padding-right: 30px; /* Spazio per l'icona dell'occhio alla destra dell'input */
+}
+
+#togglePassword {
+    position: absolute;
+    top: 70%;
+    right: 5%; /* Posizionamento dell'icona rispetto al bordo destro dell'input */
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
 .switch {
     text-align: center;
     margin-top: 10px;
@@ -83,6 +105,8 @@ body {
     color: #007bff;
     text-decoration: none;
 }
+
+
 
 /* Media query per dispositivi di larghezza massima 600px */
 @media only screen and (max-width: 600px) {
