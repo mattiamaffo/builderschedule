@@ -81,8 +81,8 @@
 
     <form id="recover-form" style="display: none;" method="post" action="..\Back_end\recupero_password.php">
             <div class="form-group">
-                <label for="cf-recover">Inserisci il tuo codice fiscale:</label>
-                <input type="text" id="cf-recover" name="cf-recover" required>
+                <label for="email-recover">Inserisci l'email associata al tuo account:</label>
+                <input type="text" id="email-recover" name="email-recover" required>
             </div>
             <div class="form-group" style="text-align: center;">
                 <button type="submit" class="Oswald-but">Modifica Password</button>
