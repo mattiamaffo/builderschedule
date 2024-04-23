@@ -20,15 +20,19 @@
 <!-- Body page -->
 <body>
     <div class="container">
-        <h1 class="dancing-script-h1">Benvenuti!</h1>
+        <h1 class="dancing-script-h1">Benvenuto!</h1>
         <form id="login-form" method="post" action="..\Back_end\login.php">
             <div class="form-group">
                 <!-- <label for="cf">Codice Fiscale:</label> -->
                 <input type="text" id="cf" placeholder="Codice Fiscale" name="cf-login" required>
             </div>
             <div class="form-group">
+            <div class="password-container">
                 <!-- <label for="password">Password:</label>-->
                 <input type="password" id="password" placeholder="Password" name="password-login" required>
+                <i class="fas fa-eye-slash" id="togglePassword-"></i>
+
+            </div>
             </div>
             <div class="form-group">
                 <button class="Oswald-but" type="submit">Accedi</button>
@@ -69,8 +73,24 @@
             <div class="switch">
                 <a class="Oswald-rec" href="#" id="recover-link">Recupera password</a>
             </div>
-            <script src="./js/home.js"></script>
+
+
+            
+            
         </form>
+
+    <form id="recover-form" style="display: none;" method="post" action="..\Back_end\recupero_password.php">
+            <div class="form-group">
+                <label for="cf-recover">Inserisci il tuo codice fiscale:</label>
+                <input type="text" id="cf-recover" name="cf-recover" required>
+            </div>
+            <div class="form-group" style="text-align: center;">
+                <button type="submit" class="Oswald-but">Modifica Password</button>
+            </div>
+    </form>
+
+
+        <script src="./js/home.js"></script>
     </div>
 </body>
 

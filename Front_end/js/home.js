@@ -4,25 +4,42 @@ const registerLink = document.getElementById('register-link');
 const loginLink = document.getElementById('login-link');
 const cfInput = document.getElementById('cf-register');
 const emailInput = document.getElementById('email');
+const password = document.getElementById('password');
 const passwordInput = document.getElementById('password-register');
 const togglePassword = document.getElementById('togglePassword');
+const togglePasswordd = document.getElementById('togglePassword-');
+
+const recoverLink = document.getElementById('recover-link');
+const recoverForm = document.getElementById('recover-form');
+const cfRecover = document.getElementById('cf-recover');
 
 registerLink.addEventListener('click', function(e) {
     e.preventDefault();
     loginForm.style.display = 'none';
     registerForm.style.display = 'block';
+    recoverForm.style.display='none';
 });
 
 loginLink.addEventListener('click', function(e) {
     e.preventDefault();
     loginForm.style.display = 'block';
     registerForm.style.display = 'none';
+    recoverForm.style.display='none';
 });
+
+recoverLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    loginForm.style.display = 'none';
+    registerForm.style.display = 'none';
+    recoverForm.style.display='block';
+});
+
 
 
 
 // Aggiungi event listener per l'input sui campi
 cfInput.addEventListener('input', validateCF);
+cfRecover.addEventListener('input', validateCF);
 emailInput.addEventListener('input', validateEmail);
 passwordInput.addEventListener('input', validatePassword);
 
@@ -68,3 +85,14 @@ togglePassword.addEventListener('click', function() {
     togglePassword.classList.toggle('fa-eye-slash');
     togglePassword.classList.toggle('fa-eye');
 });
+
+
+togglePasswordd.addEventListener('click', function() {
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+
+    // Cambia l'icona per mostrare/nascondere la password
+    togglePasswordd.classList.toggle('fa-eye-slash');
+    togglePasswordd.classList.toggle('fa-eye');
+});
+/// recover pw///
