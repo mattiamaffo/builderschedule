@@ -21,14 +21,14 @@
 <body>
     <div class="container">
         <h1 class="dancing-script-h1">Benvenuti!</h1>
-        <form id="login-form">
+        <form id="login-form" method="post" action="..\Back_end\login.php">
             <div class="form-group">
                 <!-- <label for="cf">Codice Fiscale:</label> -->
-                <input type="text" id="cf" placeholder="Codice Fiscale" name="cf" required>
+                <input type="text" id="cf" placeholder="Codice Fiscale" name="cf-login" required>
             </div>
             <div class="form-group">
                 <!-- <label for="password">Password:</label>-->
-                <input type="password" id="password" placeholder="Password" name="password" required>
+                <input type="password" id="password" placeholder="Password" name="password-login" required>
             </div>
             <div class="form-group">
                 <button class="Oswald-but" type="submit">Accedi</button>
@@ -44,7 +44,7 @@
             </div>
         </form>
         
-        <form id="register-form" style="display: none;" method="post" action="..\Back_end\server.php">
+        <form id="register-form" style="display: none;" method="post" action="..\Back_end\registrazione.php">
             <div class="form-group">
                 <label for="cf-register">Codice Fiscale:</label>
                 <input type="text" id="cf-register" name="cf-register" onchange="validateCF();" required>
