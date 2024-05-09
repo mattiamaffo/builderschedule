@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Connessione al database SQLite3
     try {
-        $db = new SQLite3('C:\xampp\htdocs\Progetto_palestra\builderschedule\DB_palestra\Gym_Db.db');
+        $db = new SQLite3('..\DB_palestra\Gym_Db.db');
     } catch (Exception $e) {
         die("Impossibile connettersi al database: " . $e->getMessage());
     }

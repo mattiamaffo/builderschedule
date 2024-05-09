@@ -1,6 +1,6 @@
 <?php
 // Connessione al database SQLite3
-$db = new SQLite3('C:\xampp\htdocs\Progetto_palestra\builderschedule\DB_palestra\Gym_Db.db');
+$db = new SQLite3('..\DB_palestra\Gym_Db.db');
 
 // Verifica se è stata inviata una richiesta POST
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email-recover'])) {
