@@ -6,8 +6,8 @@ const cfInput = document.getElementById('cf-register');
 const emailInput = document.getElementById('email');
 const password = document.getElementById('password');
 const passwordInput = document.getElementById('password-register');
-const togglePassword = document.getElementById('togglePassword');
 const togglePasswordd = document.getElementById('togglePassword-');
+const togglePassword = document.getElementById('togglePassword');
 
 const recoverLink = document.getElementById('recover-link');
 const recoverForm = document.getElementById('recover-form');
@@ -39,7 +39,7 @@ recoverLink.addEventListener('click', function(e) {
 
 // Aggiungi event listener per l'input sui campi
 cfInput.addEventListener('input', validateCF);
-cfRecover.addEventListener('input', validateCF);
+
 emailInput.addEventListener('input', validateEmail);
 passwordInput.addEventListener('input', validatePassword);
 
@@ -88,6 +88,7 @@ togglePassword.addEventListener('click', function() {
 
 
 togglePasswordd.addEventListener('click', function() {
+    const password = document.getElementById('password'); // Seleziona l'input della password
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', type);
 
@@ -95,4 +96,5 @@ togglePasswordd.addEventListener('click', function() {
     togglePasswordd.classList.toggle('fa-eye-slash');
     togglePasswordd.classList.toggle('fa-eye');
 });
+
 /// recover pw///
