@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: right;
+    padding: 10px 0;
+}
+
+.header a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.box {
+    width: calc(50% - 20px);
+    margin: 30px auto; /* Margine superiore e inferiore di 30px, centrato orizzontalmente */
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.box h2 {
+    margin-top: 0;
+}
+
+.box p {
+    margin-bottom: 0;
+}
+
+/* Altezza aggiornata per il riquadro "Le mie Schede" */
+.box:nth-child(3) {
+    height: 300px;
+    margin-top: 20px; /* Aggiunto spazio in alto */
+    margin-left: auto; /* Spostato verso destra */
+    margin-right: auto; /* Spostato verso sinistra */
+}
+
+/* Regole per dispositivi mobili */
+@media (max-width: 768px) {
+    .box {
+        width: calc(100% - 20px);
+    }
+}
