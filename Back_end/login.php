@@ -1,4 +1,5 @@
 <?php
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Connessione al database SQLite3
     try {
@@ -25,6 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Verifica se la password hashata corrisponde
             if (password_verify($Password, $row['Password'])) {
                 // Password corretta, l'utente è autenticato con successo
+                session_start();
+                $_SESSION['User_id']=$CF;
+                $_SESSION['logged-in']=true;
                 // Reindirizza l'utente alla pagina di home o alla pagina desiderata
                 echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
                 echo '<script>';
@@ -36,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             timer: 1500, // Tempo in millisecondi (2 secondi)
                             showConfirmButton: false
                             }).then(() => {
-                            window.location.href = "../Front_end/home.php";
+                            window.location.href = "../Front_end/logged_utente.php";
                             });';
                 echo '});';
                 echo '</script>';

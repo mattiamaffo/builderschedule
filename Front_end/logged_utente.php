@@ -1,4 +1,9 @@
 <?php session_start(); 
+if (!isset($_SESSION['logged-in'])) {
+    // Utente non attivo, reindirizza alla pagina di accesso
+    header("Location: home.php");
+    exit; // Assicura che lo script si interrompa dopo il reindirizzamento
+}
 ?>
 <!DOCTYPE html>
 
