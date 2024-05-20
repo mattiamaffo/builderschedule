@@ -5,6 +5,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $db = new SQLite3('..\DB_palestra\Gym_Db.db');
     } catch (Exception $e) {
+        echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+        echo '<script>';
+        echo 'document.addEventListener("DOMContentLoaded", function() {';
+        echo '    Swal.fire({
+                      title: "Registrazione fallita!",
+                      text: "Impossibile connettersi al database.",
+                      icon: "error",
+                      timer: 1500, // Tempo in millisecondi (2 secondi)
+                      showConfirmButton: false
+                    }).then(() => {
+                      window.location.href = "../Front_end/home.php";
+                    });';
+        echo '});';
+        echo '</script>';
         die("Impossibile connettersi al database: " . $e->getMessage());
     }
 
@@ -46,10 +60,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo '</script>';
                 exit;
             } else {
-                echo "La password non è corretta.";
+                echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+                echo '<script>';
+                echo 'document.addEventListener("DOMContentLoaded", function() {';
+                echo '    Swal.fire({
+                            title: "accesso fallito",
+                            text: "password non corretta.",
+                            icon: "error",
+                            timer: 1500, // Tempo in millisecondi (2 secondi)
+                            showConfirmButton: false
+                            }).then(() => {
+                            window.location.href = "../Front_end/logged_utente.php";
+                            });';
+                echo '});';
+                echo '</script>';
+                
             }
         } else {
-            echo "Codice fiscale non trovato nel database.";
+           
+            echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+                echo '<script>';
+                echo 'document.addEventListener("DOMContentLoaded", function() {';
+                echo '    Swal.fire({
+                            title: "accesso fallito",
+                            text: "codice fiscale non trovato.",
+                            icon: "error",
+                            timer: 1500, // Tempo in millisecondi (2 secondi)
+                            showConfirmButton: false
+                            }).then(() => {
+                            window.location.href = "../Front_end/logged_utente.php";
+                            });';
+                echo '});';
+                echo '</script>';
+                
         }
         
         // Chiudi la connessione al database
